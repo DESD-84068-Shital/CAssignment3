@@ -4,20 +4,20 @@
 #include<math.h>
 int main()
 {
-  int num,sum=0,rem=1,rev=0;
-  int temp=num;
+  int num,sum=0,rem=1;
 
   printf("enter the number:\n");
   scanf("%d",&num);
 
+  int temp=num;
   while(num!=0)
   {
   rem=num%10;
-  sum+=pow(rem,3);
-  rev=rev*10+rem;
+  sum += rem*rem*rem;
+  //rev = rev*10+rem;
   num=num/10;
-}
-if(temp==rev)
+	}
+if(temp == sum)
 printf("armstrong number\n");
 else
 {
